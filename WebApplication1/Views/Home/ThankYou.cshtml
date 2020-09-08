@@ -1,0 +1,15 @@
+﻿@using WebApplication1.Models
+@model Account
+
+<h1>@ViewBag.Welcome</h1>
+<br />
+<h4>Thank you for registering!!!</h4>
+<br />
+<p>Enjoy alllll the coffeeeeeeeeeeeeeeeee @Model.FirstName!!!!!!</p>
+<br />
+<form method="post" action="/Home/Order">
+    <button type="submit">Order Now!!!</button>
+    <input type="hidden" name="firstname" value="@Model.FirstName">
+    <input type="hidden" lastname="@Model.LastName">
+    <input type="hidden" email="@Model.Email">
+</form>

@@ -1,0 +1,14 @@
+﻿@using WebApplication1.Models
+@model Account
+    <br /><br />
+          <form method="post" action="/Home/ConfirmDelivery">
+              <input type="hidden" name="firstname" value="@Model.FirstName">
+              <input type="hidden" name="lastname" value="@Model.LastName">
+              <input type="hidden" name="email" value="@Model.Email">
+              <input type="hidden" name="drink" value="@Model.Drink">
+              <input type="hidden" name="size" value="@Model.Size">
+              <input type="hidden" name="ordernumber" value="@Model.OrderNumber">
+              <label for="address">Delivery Address:</label><br>
+              <input type="text" name="address"><br>
+              <input type="submit" value="Submit">
+          </form>

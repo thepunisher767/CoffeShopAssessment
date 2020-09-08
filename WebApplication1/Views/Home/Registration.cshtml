@@ -1,0 +1,19 @@
+﻿
+<h2>Register Here!!!</h2>
+
+<form method="post" action="/Home/RegisterCheck">
+    <label for="firstname">First name:</label><br>
+    <input type="text" name="firstname"><br>
+    <label for="lastname">Last name:</label><br>
+    <input type="text" name="lastname"><br />
+    <label for="email">Email Address:</label><br>
+    <input type="text" name="email"><br>
+    @Html.Raw(ViewBag.EmailCheck)
+    <label for="password">Password:</label><br>
+    <input type="password" name="password"><br />
+    @Html.Raw(ViewBag.PasswordMatch)
+    <label for="verifypassword">Re-enter Password:</label><br>
+    <input type="password" name="verifypassword"><br /><br />
+    <input type="submit" value="Submit">
+</form>
+

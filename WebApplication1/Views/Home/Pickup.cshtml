@@ -1,0 +1,15 @@
+﻿@using WebApplication1.Models
+@model Account
+<br /><br />
+
+      <form method="post" action="/Home/ConfirmPickup">
+          <input type="hidden" name="firstname" value="@Model.FirstName">
+          <input type="hidden" name="lastname" value="@Model.LastName">
+          <input type="hidden" name="email" value="@Model.Email">
+          <input type="hidden" name="drink" value="@Model.Drink">
+          <input type="hidden" name="size" value="@Model.Size">
+          <input type="hidden" name="ordernumber" value="@Model.OrderNumber">
+          <label for="pickuptime">Select a time for pickup:</label><br>
+          <input type="time" name="pickuptime" min="09:00" max="18:00"  required><br>
+          <input type="submit" value="Submit">
+      </form>

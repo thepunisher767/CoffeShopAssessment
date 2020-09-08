@@ -1,0 +1,26 @@
+﻿@using WebApplication1.Models
+@model Account
+<br />
+<br />
+<h2>Order Confirmed!</h2>
+
+<h4>Thank you for your order, @Model.FirstName!</h4>
+
+@if (Model.Address == "")
+{
+    <h3>You ordered:</h3>
+    <br />
+    <h2>@Model.Drink - @Model.Size</h2>
+    <br />
+    <br />
+    <h4>Your order will be ready at @Model.Time</h4>
+}
+else
+{
+    <h3>You ordered:</h3>
+    <br />
+    <h2>@Model.Drink - @Model.Size</h2>
+    <br />
+    <br />
+    <h4>Your order will delivered to @Model.Address approx at @ViewBag.OrderReady</h4>
+}
